@@ -1,0 +1,53 @@
+html, body{
+    height: 99%;
+    background-color: lightskyblue;
+    width: 99%;
+    margin: 0%;
+}
+
+#kolumna{
+    background-color:burlywood;
+    width:13%;
+    min-height:102%;
+    float: left;
+    line-height: 40px;
+    font-family: Garamond;
+    font-size:20px;
+    border-radius: 15%;
+}
+
+#strona{
+    width: 87%;
+    min-height: 102%;
+    background-color:lightskyblue ;
+    float: right;
+}
+
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color: white; 
+    
+}
+a:hover{
+    text-decoration:underline;
+    color: red; 
+}
+
+
+#glownastr{
+color: white;
+font-size: 25px;
+text-align: left;
+}
+
+
+#naglowek{
+color: black;
+font-size: 50px;
+text-align: center;
+margin-top: 10px;
+}

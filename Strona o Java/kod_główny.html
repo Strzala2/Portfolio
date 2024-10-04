@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <title>projekt aplikacje</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            var strony={
+                'glowna': `<p id="naglowek">Główna Strona</p><br>
+                <p id="glownastr">Strona ma nam służyć jako swego rodzaju biblioteka tego co do tej pory nauczyliśmy się na lekcjach aplikacji internetowych.<br>Znajdą się tutaj podstawy podstaw jak i również rzeczy troszkę bardziej zaawansowane.<br>Mam nadzieję, że strona będzie przejrzysta, a treści w niej zawarte łatwe do zrozumienia.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Stronę wykonali:Dorian Chruszcz i Mateusz Kruk </p>`,
+                'podstawy': `<p id="naglowek">Podstawy JS</p><br>
+                <p id="glownastr">JavaScript możemy zastosować w HTML'u na dwa różne sposoby  plik o rozszerzeniu .json lub pisząc skrypt w samym pliku HTML<br>Jeżeli chcemy użyć skryptu JS bezpośrednio w pliku HTML musimy otworzyć i zamknąć skrypt w ten sposób:<br><img src='kod1.jpg' style='width:250px;height:250px'/><br></p>`,
+                'wyswietlanie': `<p id="naglowek">Wyświetlanie komunikatów</p><br>
+                <p id="glownastr">W JS można wyświetlić jakiś komunikat za pomocą komendy która nie zwraca żadnych wartości więc nadaje się tylko do zakomunikowania użytkownika strony o danej akcji jaką wykonał np. kliknął w jakieś okienko bądz napis i my jako twórcy chcemy mu pogratulowac tego osiągnięcia. Możemy to zrobić za pomocą komendy alert. Niżej kod jak poprawnie tego użyć i efekt działania kodu.<br><img src='kod2_1.jpg' style='width:800px;height:250px'/><br><img src='kod2_2.jpg' style='width:1400px;height:350px'/>  </p>`,
+                'dialogi': `<p id="naglowek">Dialogi</p><br>
+                <p id="glownastr">Okna dialogowe pozwalają nam zebrać wartości od użytkownika za pomocą rzeczy które tam umieścimy(przyciski,listy rozwijane itd.). Może też nie robić nic i działać tak samo jak alert. Korzysta się z niego przyjemniej niż z alerta bo można go łatwiej modyfikować i zmieniać zależnie od preferencji klienta czy autora kodu. Można o tym pomyśleć jak o kontenerku który zbiera wartości narzędziami którymi został obdarowany przez szefa.</p>`,
+                'zmienne': `<p id="naglowek">Zmienne</p><br>
+                <p id="glownastr"> Zmienne w JavaScript to deklaracje, które pozwalają na przechowywanie i manipulowanie danymi w trakcie wykonywania programu.<br> Przykładem zmiennej w JavaScript może być deklaracja zmiennej przechowującej liczbę:<br><img src='kod_zmienne.jpg'><br>W powyższym przykładzie zmienna o nazwie liczba została zadeklarowana za pomocą słowa kluczowego let. Następnie, przypisano jej wartość 10 za pomocą operatora przypisania =.<br>Zmienne w JavaScript są dynamicznie typowane, co oznacza, że nie musimy określać typu zmiennej podczas jej deklaracji. <br>Typ zmiennej jest określany na podstawie wartości, którą do niej przypiszemy.<br>Przykładem tego może być deklaracja zmiennej przechowującej ciąg znaków:<br><img src='kod_zmienne2.jpg'><br>W tym przypadku, zmienna napis została zadeklarowana jako ciąg znaków (typ string) na podstawie wartości, którą do niej przypisano.
+
+`,
+                'petle': `<p id="naglowek">Pętle</p><br>
+                <p id="glownastr">Pętle w JavaScript to struktury programistyczne, które pozwalają na wykonywanie pewnego bloku kodu wielokrotnie, w zależności od określonych warunków. <br> W JavaScript mamy do dyspozycji dwie główne pętle: for oraz while. <br> Pętla for pozwala na wykonanie bloku kodu określoną ilość razy, na podstawie wartości początkowej zmiennej, warunku zakończenia i instrukcji inkrementacji/dekrementacji.Przykład pętli for:<br><img src='kod_pętle.jpg'> <br>W tym przykładzie, blok kodu będzie wykonywał się pięć razy, zaczynając od wartości 0, a kończąc na wartości 4. W każdej iteracji, zmienna i zostanie zwiększona o 1, za pomocą operatora inkrementacji ++.<br> Pętla while pozwala na wykonanie bloku kodu, dopóki warunek zdefiniowany w jej nagłówku jest spełniony.<br> Przykład pętli while:<br> <img src='kod_pętle2.jpg'><br>W tym przykładzie, blok kodu będzie wykonywał się dopóki wartość zmiennej i jest mniejsza niż 5. W każdej iteracji, zmienna i zostanie zwiększona o 1.<br> `,
+                'funkcje': `<p id="naglowek">Funkcje</p><br>
+                 <p id="glownastr"> Funkcje w JavaScript to bloki kodu, które pozwalają na wykonywanie określonych operacji w ramach programu. Funkcje pozwalają na zdefiniowanie jednego lub więcej zadań, które można wywołać w innym miejscu programu, aby uniknąć powielania kodu. <br> Przykład funkcji w JavaScript: <br><img src='kod_funkcje.jpg'><br>W tym przykładzie, zdefiniowana została funkcja dodaj, która przyjmuje dwa argumenty - a i b. Wewnątrz funkcji, wykonuje się operacja dodawania wartości tych argumentów za pomocą operatora +. Następnie, wynik zostaje zwrócony z funkcji przy użyciu słowa kluczowego return.<br> Funkcje w JavaScript pozwalają również na zdefiniowanie zmiennych lokalnych, które są dostępne tylko wewnątrz funkcji.<br> Przykład: <br><img src='kod_funkcje2.jpg'><br> W tym przykładzie, zdefiniowana została funkcja powitanie, która przyjmuje argument imie. Wewnątrz funkcji, zdefiniowana została zmienna lokalna wiadomosc, która jest dostępna tylko wewnątrz tej funkcji. Następnie, wypisywana jest wartość tej zmiennej w konsoli, po złożeniu z innymi wartościami.<br>`,
+                'obiekty':`<p id="naglowek">Obiekty</p><br>
+                 <p id="glownastr"> Obiekty w JavaScript to złożone struktury danych, które pozwalają na przechowywanie i manipulowanie danymi. Obiekt składa się z właściwości (ang. properties) i metod (ang. methods), które są zdefiniowane wewnątrz obiektu.<br> Przykład obiektu w JavaScript:<br> <img src='kod_obiekty.jpg'><br>W tym przykładzie, zdefiniowany został obiekt osoba, który składa się z trzech właściwości - imie, nazwisko i wiek, oraz jednej metody - powitanie. Metoda powitanie wykorzystuje właściwości obiektu, aby wyświetlić w konsoli powitanie osoby.<br> Do właściwości i metod obiektu można się odwołać za pomocą operatora kropki (.) lub nawiasów kwadratowych ([]).<br>Przykład dostępu do właściwości obiektu:<br> <img src='kod_obiekty2.jpg'><br>W tym przykładzie, wykorzystano operator kropki i nawiasów kwadratowych, aby uzyskać wartość właściwości imie i nazwisko.`,
+                'obiektywbud':`<p id="naglowek">Obiekty Wbudowane</p><br>
+                 <p id="glownastr"> Obiekty wbudowane w JavaScript to gotowe do użycia struktury danych i funkcje, które są dostępne bezpośrednio w języku JavaScript. Do najczęściej używanych obiektów wbudowanych należą:<br>Obiekt Math: umożliwia wykonywanie operacji matematycznych, takich jak pierwiastkowanie, potęgowanie, obliczanie wartości bezwzględnej czy zaokrąglanie.<br><img src='kod_OW1.jpg'><br>Obiekt Date: umożliwia manipulowanie datami i czasem.<br><img src='kod_OW2.jpg'><br>Obiekt String: umożliwia manipulowanie ciągami znaków.<br><img src='kod_OW3.jpg'><br>Obiekt Array: umożliwia manipulowanie listami danych.<br><img src='kod_OW4.jpg'><br>`,
+                'debugger':`<p id="naglowek">Debugger</p><br>
+                 <p id="glownastr"> Debugger w JavaScript to narzędzie służące do znajdowania i eliminowania błędów w kodzie. Dostępny jest w większości środowisk programistycznych oraz przeglądarek internetowych i pozwala programiście na zatrzymanie działania programu w dowolnym momencie i zbadanie stanu zmiennych oraz wykonywanie kodu linia po linii.<br> Przykład użycia debuggera w JavaScript:<br> <img src='kod_debug.jpg'> <br> W tym przykładzie, użyto polecenia debugger, które spowoduje zatrzymanie działania programu na tej linii kodu. Następnie można przeglądać stan zmiennych i wykonywać kod linia po linii, korzystając z narzędzi debugujących dostępnych w środowisku programistycznym lub przeglądarce.<br>`,
+                'komentarze':`<p id="naglowek">Komentarze</p><br>
+                 <p id="glownastr"> Komentarze w JavaScript to specjalne fragmenty kodu, które są ignorowane przez interpreter i służą do opisu funkcji, zmiennych lub całych bloków kodu. Są one bardzo przydatne, ponieważ pozwalają na zrozumienie działania kodu i ułatwiają jego późniejsze modyfikacje.<br> W JavaScript komentarze można umieszczać na dwa sposoby:<br> Komentarze jednolinijkowe rozpoczynają się od dwóch ukośników // i obejmują tylko jedną linię.<br><img src='kod_kom.jpg'> <br> Komentarze wielolinijkowe rozpoczynają się od /* i kończą się na */ i mogą obejmować wiele linii.<br> <img src='kod_kom2.jpg'> <br>`,
+                'dom':`<p id="naglowek">Obiekty DOM</p><br>
+                 <p id="glownastr"> Obiekty DOM (Document Object Model) w JavaScript to interfejs programowania umożliwiający dostęp i manipulację elementami strony internetowej. Każdy element strony internetowej jest reprezentowany przez obiekt w modelu DOM, co umożliwia programiście modyfikację elementów w czasie rzeczywistym, zmianę ich stylów, zawartości, dodawanie i usuwanie elementów, itp.<br><img src='kod_OD.jpg' style='width:600px;height:550px'><br>W tym przykładzie, użyto obiektów DOM do pobrania elementu o danym ID (getElementById), zmiany tekstu w nagłówku (textContent), zmiany koloru tekstu (style.color), a także dodania nowego elementu do strony (createElement, textContent, appendChild).`,
+                'zdarzenia':`<p id="naglowek">Zdarzenia</p><br>
+                 <p id="glownastr"> Obsługa zdarzeń w JavaScript to sposób programowania reagujący na interakcje użytkownika z elementami strony internetowej. Zdarzenie może być wywołane przez użytkownika (np. kliknięcie myszą, wpisanie tekstu w polu formularza), a także przez przeglądarkę (np. załadowanie strony, zmiana rozmiaru okna). <br> Aby obsłużyć zdarzenie w JavaScript, należy przypisać funkcję do elementu, który ma reagować na dane zdarzenie. Można to zrobić na kilka sposobów, np. poprzez atrybut onclick, metodę addEventListener, lub poprzez bibliotekę jQuery.<br> Przykład obsługi zdarzeń w JavaScript za pomocą metody addEventListener:<br><img src='kod_zd.jpg' style='width:450px;height:500px'><br> W tym przykładzie, użyto metody addEventListener do przypisania funkcji do zdarzenia kliknięcia przycisku. Gdy użytkownik kliknie przycisk, wywołana zostanie funkcja, która wyświetli okno z wiadomością.`,
+                'skrypty':`<p id="naglowek">Skrypty</p><br>
+                 <p id="glownastr"> Skrypty JavaScript są zwykle używane do dodawania interaktywności i dynamiczności na stronach internetowych. Mogą być używane do zmiany treści na stronie, dodawania animacji, walidacji formularzy, wysyłania żądań do serwera, reagowania na zdarzenia użytkownika i wiele więcej.<br> Aby dodać skrypt do strony internetowej, należy umieścić tag script w sekcji head lub body dokumentu HTML. Istnieją dwa sposoby umieszczenia skryptu w HTML:<br> Wewnętrzny skrypt - kod JavaScript jest umieszczony bezpośrednio w tagu script, który jest umieszczony w dokumencie HTML.<br> <img src='kod_skrypt1.jpg' style='width:800px;height:250px'><br>Zewnętrzny skrypt - kod JavaScript jest umieszczony w oddzielnym pliku, który jest dołączany do dokumentu HTML za pomocą atrybutu src tagu script.<br> <img src='kod_skrypt2.jpg' style='width:800px;height:250px'>`,
+            };
+            function kliknietastrona(strona){
+                var contentToReturn;
+                switch(strona){
+                    case'glowna':
+                        contentToReturn = strony.glowna;
+                        break;
+
+                    case'podstawy':
+                        contentToReturn = strony.podstawy;
+                        break;
+
+                    case'wyswietlanie':
+                        contentToReturn = strony.wyswietlanie;
+                        break;
+
+                    case'dialogi':
+                        contentToReturn = strony.dialogi;
+                        break;
+
+                    case'zmienne':
+                        contentToReturn = strony.zmienne;
+                        break;
+
+                    case'petle':
+                        contentToReturn = strony.petle;
+                        break;
+                        
+                    case'funkcje':
+                        contentToReturn = strony.funkcje;
+                        break;
+                        
+                    case'obiekty':
+                        contentToReturn = strony.obiekty;
+                        break;
+                        
+                    case'obiektywbud':
+                        contentToReturn = strony.obiektywbud;
+                        break;
+                        
+                    case'debugger':
+                        contentToReturn = strony.debugger;
+                        break;
+                        
+                    case'komentarze':
+                        contentToReturn = strony.komentarze;
+                        break;
+                        
+                    case'dom':
+                        contentToReturn = strony.dom;
+                        break;
+                        
+                    case'zdarzenia':
+                        contentToReturn = strony.zdarzenia;
+                        break;
+                        
+                    case'skrypty':
+                        contentToReturn = strony.skrypty;
+                        break;
+                }
+                document.getElementById('content').innerHTML = contentToReturn;
+            }
+        </script>
+        <body onload="kliknietastrona('glowna')">
+
+            <div id="kolumna"">
+                <ul>
+                    <li>
+                        <a href="#" onclick="kliknietastrona('glowna')">
+                            Główna
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="kliknietastrona('podstawy')">
+                            Podstawy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="kliknietastrona('wyswietlanie')">
+                            Wyświetlanie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="kliknietastrona('dialogi')">
+                            Dialogi
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="kliknietastrona('zmienne')">
+                            Zmienne
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="kliknietastrona('petle')">
+                            Pętle
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="kliknietastrona('funkcje')">
+                            Funkcje
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="kliknietastrona('obiekty')">
+                            Obiekty
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="kliknietastrona('obiektywbud')">
+                            Obiekty wbudowane
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="kliknietastrona('debugger')">
+                            Debugger
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="kliknietastrona('komentarze')">
+                            Komentarze
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="kliknietastrona('dom')">
+                            Obiekty DOM
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="kliknietastrona('zdarzenia')">
+                            Obsługa zdarzeń
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="kliknietastrona('skrypty')">
+                            Wykorzystanie skryptów
+                        </a>
+                    </li>
+                </ul>
+        
+            </div>
+            
+        <div id="strona">
+            <p id="content"><p>
+        </div>
+    </body>
+</html>
